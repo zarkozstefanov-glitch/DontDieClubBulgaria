@@ -311,7 +311,7 @@ export default function Home() {
       </main>
 
       <Footer />
-      <NextStepCTA href="/training" label="Виж тренировките" />
+      <NextStepCTA href="/about" label="Виж повече за нас" />
     </>
   );
 }
