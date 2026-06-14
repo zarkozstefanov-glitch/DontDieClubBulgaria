@@ -46,17 +46,22 @@ export default function HeroNotifications() {
       return;
     }
 
-    // Show typing indicator, then reveal message
-    setTyping(true);
-    const typingTimer = setTimeout(() => {
-      setTyping(false);
-      const showTimer = setTimeout(() => {
-        setVisibleCount((c) => c + 1);
-      }, 200);
-      return () => clearTimeout(showTimer);
-    }, 1200);
+    // First message waits 5s, subsequent ones wait 2.5s
+    const initialDelay = visibleCount === 0 ? 5000 : 0;
 
-    return () => clearTimeout(typingTimer);
+    const startTimer = setTimeout(() => {
+      setTyping(true);
+      const typingTimer = setTimeout(() => {
+        setTyping(false);
+        const showTimer = setTimeout(() => {
+          setVisibleCount((c) => c + 1);
+        }, 200);
+        return () => clearTimeout(showTimer);
+      }, 2500);
+      return () => clearTimeout(typingTimer);
+    }, initialDelay);
+
+    return () => clearTimeout(startTimer);
   }, [visibleCount]);
 
   return (

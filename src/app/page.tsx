@@ -29,7 +29,8 @@ export default function Home() {
           </div>
 
           {/* Content */}
-          <div className="relative z-20 mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-center px-5 pt-20 pb-6 md:px-8 md:pt-28 md:pb-10">
+          <div className="relative z-20 mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-between px-5 pt-24 pb-6 md:justify-center md:px-8 md:pt-28 md:pb-10">
+            {/* Top: title, text, buttons */}
             <div className="max-w-2xl w-full">
               <AnimatedSection direction="left" delay={0.4}>
                 <h1 className="mb-3 max-w-xl font-heading text-[2rem] font-bold leading-[1.02] text-white min-[390px]:text-[2.3rem] min-[430px]:text-[2.6rem] sm:text-5xl md:mb-5 md:text-7xl">
@@ -56,7 +57,10 @@ export default function Home() {
                   </a>
                 </div>
               </AnimatedSection>
+            </div>
 
+            {/* Bottom: notification messages */}
+            <div className="max-w-2xl w-full md:hidden">
               <HeroNotifications />
             </div>
           </div>
