@@ -31,44 +31,45 @@ export default function Home() {
           <div className="relative z-20 mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-center px-5 pt-20 pb-8 md:px-8 md:pt-28 md:pb-10">
             <div className="max-w-2xl w-full">
               <AnimatedSection direction="left" delay={0.4}>
-                <h1 className="mb-4 font-heading text-4xl font-bold leading-[1.05] text-white sm:text-5xl md:mb-5 md:text-7xl">
-                  Влез във форма.
-                  <br />
-                  Изгради навици.
-                  <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#74B9E8] to-[#4FBF82]">
-                    Не го прави сам.
+                <p className="mb-3 text-[11px] font-bold uppercase tracking-[0.28em] text-white/55">
+                  Don&apos;t Die Club Bulgaria
+                </p>
+                <h1 className="mb-4 max-w-xl font-heading text-4xl font-bold leading-[1.02] text-white sm:text-5xl md:mb-5 md:text-7xl">
+                  По-добра форма.
+                  <span className="block text-[#74B9E8]">
+                    По-добри навици.
                   </span>
                 </h1>
               </AnimatedSection>
 
               <AnimatedSection direction="left" delay={0.6}>
-                <p className="mb-5 max-w-lg text-base leading-relaxed text-white/72 md:mb-8 md:text-xl">
-                  Don&apos;t Die Club Bulgaria е общност за движение, здравословни навици и измерим прогрес — за хора, които искат повече енергия, по-добра форма и по-дълъг активен живот.
+                <p className="mb-5 max-w-lg text-base leading-relaxed text-white/76 md:mb-8 md:text-xl">
+                  Тренировки навън, BioAge тестове и седмичен ритъм за хора, които искат да се движат по-добре и да мерят реален прогрес.
                 </p>
               </AnimatedSection>
 
               <AnimatedSection direction="up" delay={0.8}>
                 <div className="flex flex-col gap-3 sm:flex-row">
-                  <Link href="/meetups" className="group w-full rounded-full bg-[#4FBF82] px-7 py-3.5 text-center text-base font-bold text-[#102A3A] transition-all hover:-translate-y-0.5 hover:shadow-2xl hover:shadow-[#4FBF82]/30 md:w-auto md:px-8 md:py-4">
-                    Следваща среща
-                    <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform">&rarr;</span>
+                  <Link href="/meetups" className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#4FBF82] px-6 py-3.5 text-base font-bold text-[#102A3A] transition-all hover:-translate-y-0.5 hover:bg-[#5fcb90] hover:shadow-2xl hover:shadow-[#4FBF82]/25 md:w-auto md:px-7 md:py-4">
+                    <span>Следваща среща</span>
+                    <span className="transition-transform group-hover:translate-x-1">→</span>
                   </Link>
-                  <a href="#za-kogo" className="w-full rounded-full border border-white/20 bg-white/10 px-7 py-3.5 text-center text-base font-bold text-white backdrop-blur-md transition-all hover:bg-white/20 md:w-auto md:px-8 md:py-4">
-                    За кого е клубът
+                  <a href="#za-kogo" className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/[0.18] bg-white/[0.08] px-6 py-3.5 text-base font-bold text-white backdrop-blur-md transition-all hover:bg-white/[0.14] md:w-auto md:px-7 md:py-4">
+                    <span>Как работим</span>
+                    <span>→</span>
                   </a>
                 </div>
               </AnimatedSection>
 
-              {/* Floating cards — mobile */}
               <AnimatedSection direction="up" delay={1}>
-                <div className="mt-6 grid grid-cols-1 gap-2 sm:grid-cols-3 md:hidden">
+                <div className="mt-6 flex flex-col gap-2 md:mt-10 md:flex-row">
                   {[
-                    { title: "Навън", label: "тренировка и въздух" },
-                    { title: "Заедно", label: "train buddy" },
-                    { title: "Редовно", label: "малко, но всяка седмица" },
+                    { title: "Навън", label: "Тренировка и въздух" },
+                    { title: "BioAge", label: "Мери прогреса" },
+                    { title: "Редовно", label: "Всяка седмица" },
                   ].map((item) => (
-                    <div key={item.title} className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/10 px-4 py-3 backdrop-blur-md">
-                      <span className="font-heading text-sm font-bold text-white">{item.title}</span>
+                    <div key={item.title} className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/10 px-4 py-3 backdrop-blur-md md:min-w-0 md:flex-1">
+                      <span className="font-heading text-sm font-bold text-white md:text-base">{item.title}</span>
                       <span className="ml-3 text-right text-xs text-white/60">{item.label}</span>
                     </div>
                   ))}
