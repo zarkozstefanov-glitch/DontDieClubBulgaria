@@ -8,6 +8,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 const navItems = [
   { href: "/", label: "Начало" },
+  { href: "/about", label: "За нас" },
   { href: "/training", label: "Тренировки" },
   { href: "/bioage", label: "BioAge" },
   { href: "/food", label: "Храна" },
