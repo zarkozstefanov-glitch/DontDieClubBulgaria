@@ -47,7 +47,7 @@ export default function Home() {
           <div className="relative z-20 mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-center px-5 pt-20 pb-8 md:px-8 md:pt-28 md:pb-10">
             <div className="max-w-2xl w-full">
               <AnimatedSection direction="left" delay={0.4}>
-                <h1 className="mb-[3vw] font-heading text-[clamp(2.2rem,7vw,4.5rem)] font-bold leading-[1.05] text-white md:mb-5 md:text-7xl">
+                <h1 className="mb-4 font-heading text-4xl font-bold leading-[1.05] text-white sm:text-5xl md:mb-5 md:text-7xl">
                   Влез във форма.
                   <br />
                   Изгради навици.
@@ -58,18 +58,18 @@ export default function Home() {
               </AnimatedSection>
 
               <AnimatedSection direction="left" delay={0.6}>
-                <p className="mb-[3vw] max-w-lg text-[clamp(0.9rem,2.5vw,1.25rem)] leading-relaxed text-white/72 md:mb-8">
+                <p className="mb-5 max-w-lg text-base leading-relaxed text-white/72 md:mb-8 md:text-xl">
                   Don&apos;t Die Club Bulgaria е общност за движение, здравословни навици и измерим прогрес — за хора, които искат повече енергия, по-добра форма и по-дълъг активен живот.
                 </p>
               </AnimatedSection>
 
               <AnimatedSection direction="up" delay={0.8}>
                 <div className="flex flex-col gap-3 sm:flex-row">
-                  <Link href="/meetups" className="group w-full rounded-full bg-[#4FBF82] px-7 py-[clamp(0.75rem,2vw,1rem)] text-center text-[clamp(0.9rem,2.5vw,1rem)] font-bold text-[#102A3A] transition-all hover:-translate-y-0.5 hover:shadow-2xl hover:shadow-[#4FBF82]/30 md:w-auto md:px-8 md:py-4 md:text-base">
+                  <Link href="/meetups" className="group w-full rounded-full bg-[#4FBF82] px-7 py-3.5 text-center text-base font-bold text-[#102A3A] transition-all hover:-translate-y-0.5 hover:shadow-2xl hover:shadow-[#4FBF82]/30 md:w-auto md:px-8 md:py-4">
                     Присъедини се
                     <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform">&rarr;</span>
                   </Link>
-                  <a href="#za-kogo" className="w-full rounded-full border border-white/20 bg-white/10 px-7 py-[clamp(0.75rem,2vw,1rem)] text-center text-[clamp(0.9rem,2.5vw,1rem)] font-bold text-white backdrop-blur-md transition-all hover:bg-white/20 md:w-auto md:px-8 md:py-4 md:text-base">
+                  <a href="#za-kogo" className="w-full rounded-full border border-white/20 bg-white/10 px-7 py-3.5 text-center text-base font-bold text-white backdrop-blur-md transition-all hover:bg-white/20 md:w-auto md:px-8 md:py-4">
                     За кого е клубът
                   </a>
                 </div>
@@ -77,10 +77,10 @@ export default function Home() {
 
               {/* Floating cards — mobile */}
               <AnimatedSection direction="up" delay={1}>
-                <div className="mt-5 flex flex-wrap gap-2 md:hidden">
-                  <span className="mobile-hero-pill">Тренировка навън</span>
-                  <span className="mobile-hero-pill">Train buddy</span>
-                  <span className="mobile-hero-pill">Малко, но редовно</span>
+                <div className="mt-6 flex gap-2 md:hidden">
+                  <span className="mobile-hero-pill flex-1 text-center">Тренировка навън</span>
+                  <span className="mobile-hero-pill flex-1 text-center">Train buddy</span>
+                  <span className="mobile-hero-pill flex-1 text-center">Малко, но редовно</span>
                 </div>
               </AnimatedSection>
             </div>
