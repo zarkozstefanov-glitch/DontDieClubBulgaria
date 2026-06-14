@@ -32,7 +32,7 @@ export default function Home() {
           <div className="relative z-20 mx-auto flex h-[100svh] max-w-7xl flex-col px-5 pt-20 pb-4 md:justify-center md:px-8 md:pt-28 md:pb-10 md:h-auto md:min-h-[100svh]">
             <div className="max-w-2xl w-full">
               <AnimatedSection direction="left" delay={0.3}>
-                <h1 className="mb-1 max-w-xl font-heading text-[1.8rem] font-bold leading-[1.02] text-white min-[390px]:text-[2rem] min-[430px]:text-[2.4rem] sm:text-5xl md:mb-4 md:text-7xl">
+                <h1 className="mb-1 max-w-xl font-heading text-[1.8rem] font-bold leading-[1.02] text-white min-[390px]:text-[2rem] min-[414px]:text-[2.3rem] min-[430px]:text-[2.6rem] sm:text-5xl md:mb-4 md:text-7xl">
                   Don&apos;t Die Bulgaria.
                   <span className="block text-[#74B9E8]">Живей повече.</span>
                 </h1>
