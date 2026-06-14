@@ -44,10 +44,10 @@ export default function Home() {
           </div>
 
           {/* Content */}
-          <div className="relative z-20 mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-center px-5 pt-20 pb-8 md:px-8 md:pt-28 md:pb-10">
+          <div className="relative z-20 mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-between px-5 pt-24 pb-6 md:justify-center md:px-8 md:pt-28 md:pb-10">
             <div className="max-w-2xl w-full">
               <AnimatedSection direction="left" delay={0.4}>
-                <h1 className="mb-3 font-heading text-[2.1rem] font-bold leading-[1.05] text-white sm:text-5xl md:mb-5 md:text-7xl">
+                <h1 className="mb-3 font-heading text-[2rem] font-bold leading-[1.05] text-white sm:text-5xl md:mb-5 md:text-7xl">
                   Влез във форма.
                   <br />
                   Изгради навици.
@@ -69,15 +69,24 @@ export default function Home() {
                     Присъедини се към следващото събиране
                     <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform">&rarr;</span>
                   </Link>
-                  <Link href="/training" className="w-full rounded-full border border-white/20 bg-white/10 px-7 py-3.5 text-center text-[15px] font-bold text-white backdrop-blur-md transition-all hover:bg-white/20 md:w-auto md:px-8 md:py-4 md:text-base">
-                    Виж как тренираме
-                  </Link>
+                  <a href="#za-kogo" className="w-full rounded-full border border-white/20 bg-white/10 px-7 py-3.5 text-center text-[15px] font-bold text-white backdrop-blur-md transition-all hover:bg-white/20 md:w-auto md:px-8 md:py-4 md:text-base">
+                    За кого е клубът
+                  </a>
                 </div>
               </AnimatedSection>
             </div>
+
+            {/* Floating cards — bottom on mobile */}
+            <AnimatedSection direction="up" delay={1}>
+              <div className="mt-auto flex flex-wrap gap-2 pt-6 md:hidden">
+                <span className="mobile-hero-pill">Тренировка навън</span>
+                <span className="mobile-hero-pill">Train buddy</span>
+                <span className="mobile-hero-pill">Малко, но редовно</span>
+              </div>
+            </AnimatedSection>
           </div>
 
-          <div className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 animate-bounce sm:flex">
+          <div className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 animate-bounce md:flex">
             <span className="text-white/30 text-xs uppercase tracking-widest">Scroll</span>
             <svg className="w-5 h-5 text-white/30" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
@@ -86,7 +95,7 @@ export default function Home() {
         </section>
 
         {/* FOR WHOM */}
-        <section className="py-20 md:py-32 bg-[#F5FAF7] relative overflow-hidden">
+        <section id="za-kogo" className="py-20 md:py-32 bg-[#F5FAF7] relative overflow-hidden scroll-mt-16">
           <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#4FBF82]/20 to-transparent" />
           <div className="max-w-7xl mx-auto px-5 md:px-8">
             <div className="grid md:grid-cols-2 gap-12 items-center">
