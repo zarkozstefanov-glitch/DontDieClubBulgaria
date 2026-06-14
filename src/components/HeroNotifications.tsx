@@ -44,26 +44,23 @@ export default function HeroNotifications() {
   useEffect(() => {
     if (visibleCount >= notifications.length) {
       setTyping(false);
-      // Show button 1s after last message
-      const btnTimer = setTimeout(() => setShowButton(true), 1000);
+      const btnTimer = setTimeout(() => setShowButton(true), 800);
       return () => clearTimeout(btnTimer);
     }
 
-    // First message: 5s delay. Others: start typing immediately
-    const initialDelay = visibleCount === 0 ? 5000 : 0;
+    // 3s before first message, 1.5s typing for each
+    const wait = visibleCount === 0 ? 3000 : 300;
 
-    const startTimer = setTimeout(() => {
+    const waitTimer = setTimeout(() => {
       setTyping(true);
-      const typingTimer = setTimeout(() => {
+      const typeTimer = setTimeout(() => {
         setTyping(false);
-        setTimeout(() => {
-          setVisibleCount((c) => c + 1);
-        }, 200);
-      }, 2500);
-      return () => clearTimeout(typingTimer);
-    }, initialDelay);
+        setTimeout(() => setVisibleCount((c) => c + 1), 150);
+      }, 1500);
+      return () => clearTimeout(typeTimer);
+    }, wait);
 
-    return () => clearTimeout(startTimer);
+    return () => clearTimeout(waitTimer);
   }, [visibleCount]);
 
   return (
@@ -110,7 +107,7 @@ export default function HeroNotifications() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, type: "spring", stiffness: 120, damping: 18 }}
-            className="mt-1 inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/[0.18] bg-white/[0.08] px-6 py-3 text-[15px] font-bold text-white backdrop-blur-md transition-all hover:bg-white/[0.14] min-[390px]:py-3.5 min-[390px]:text-base min-[430px]:py-4 min-[430px]:text-lg md:w-auto md:px-7 md:py-4 md:text-base"
+            className="mt-1 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#74B9E8] px-6 py-3 text-[15px] font-bold text-[#102A3A] shadow-lg shadow-[#74B9E8]/20 transition-all hover:-translate-y-0.5 hover:bg-[#8ac6ed] min-[390px]:py-3.5 min-[390px]:text-base min-[430px]:py-4 min-[430px]:text-lg md:w-auto md:px-7 md:py-4 md:text-base"
           >
             <span>За кого е клубът?</span>
             <span>↓</span>

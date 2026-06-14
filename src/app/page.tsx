@@ -31,14 +31,22 @@ export default function Home() {
           {/* Content */}
           <div className="relative z-20 mx-auto flex min-h-[100svh] max-w-7xl flex-col px-5 pt-24 pb-6 md:justify-center md:px-8 md:pt-28 md:pb-10">
             <div className="max-w-2xl w-full">
-              <AnimatedSection direction="left" delay={0.4}>
-                <h1 className="mb-0 max-w-xl font-heading text-[2rem] font-bold leading-[1.02] text-white min-[390px]:text-[2.3rem] min-[430px]:text-[2.6rem] sm:text-5xl md:mb-5 md:text-7xl">
-                  Don&apos;t Die.
+              <AnimatedSection direction="left" delay={0.3}>
+                <h1 className="mb-2 max-w-xl font-heading text-[2rem] font-bold leading-[1.02] text-white min-[390px]:text-[2.3rem] min-[430px]:text-[2.6rem] sm:text-5xl md:mb-4 md:text-7xl">
+                  Don&apos;t Die Bulgaria.
                   <span className="block text-[#74B9E8]">Живей повече.</span>
                 </h1>
               </AnimatedSection>
 
-              {/* Messages appear below title, then button at the end */}
+              <AnimatedSection direction="up" delay={0.7}>
+                <div className="mt-3 flex items-center gap-3 min-[390px]:mt-4 min-[430px]:mt-5">
+                  <div className="h-px flex-1 bg-white/15" />
+                  <span className="text-xs font-bold uppercase tracking-[0.2em] text-white/60 min-[390px]:text-[13px] min-[430px]:text-sm">Пловдив, България</span>
+                  <div className="h-px flex-1 bg-white/15" />
+                </div>
+              </AnimatedSection>
+
+              {/* Messages appear below, then button at the end */}
               <HeroNotifications />
             </div>
           </div>
