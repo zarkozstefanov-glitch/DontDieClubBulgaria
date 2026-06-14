@@ -4,6 +4,7 @@ import Navigation from "@/components/Navigation";
 import AnimatedSection from "@/components/AnimatedSection";
 import Footer from "@/components/Footer";
 import NextStepCTA from "@/components/NextStepCTA";
+import HeroNotifications from "@/components/HeroNotifications";
 
 export default function Home() {
   return (
@@ -28,52 +29,45 @@ export default function Home() {
           </div>
 
           {/* Content */}
-          <div className="relative z-20 mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-center px-5 pt-20 pb-8 md:px-8 md:pt-28 md:pb-10">
-            <div className="max-w-2xl w-full">
-              <AnimatedSection direction="left" delay={0.4}>
-                <p className="mb-3 text-[11px] font-bold uppercase tracking-[0.28em] text-white/55">
-                  Don&apos;t Die Club Bulgaria
-                </p>
-                <h1 className="mb-4 max-w-xl font-heading text-4xl font-bold leading-[1.02] text-white sm:text-5xl md:mb-5 md:text-7xl">
-                  По-добра форма.
-                  <span className="block text-[#74B9E8]">
-                    По-добри навици.
-                  </span>
-                </h1>
-              </AnimatedSection>
+          <div className="relative z-20 mx-auto flex h-[100svh] max-w-7xl flex-col px-5 md:justify-center md:px-8">
+            {/* Spacer — pushes content down past nav */}
+            <div className="shrink-0 h-[max(env(safe-area-inset-top,0px),0px)] pt-20 md:pt-28" />
 
-              <AnimatedSection direction="left" delay={0.6}>
-                <p className="mb-5 max-w-lg text-base leading-relaxed text-white/76 md:mb-8 md:text-xl">
-                  Тренировки навън, BioAge тестове и седмичен ритъм за хора, които искат да се движат по-добре и да мерят реален прогрес.
-                </p>
-              </AnimatedSection>
+            {/* Main content — grows to fill available space */}
+            <div className="flex flex-1 flex-col justify-center md:flex-none">
+              <div className="max-w-2xl w-full">
+                <AnimatedSection direction="left" delay={0.4}>
+                  <h1 className="mb-[2.5vh] max-w-xl font-heading text-[clamp(1.75rem,8vw,2.5rem)] font-bold leading-[1.02] text-white md:mb-5 md:text-7xl">
+                    Влез във форма.
+                    <span className="block text-[#74B9E8]">Изгради навици.</span>
+                  </h1>
+                </AnimatedSection>
 
-              <AnimatedSection direction="up" delay={0.8}>
-                <div className="flex flex-col gap-3 sm:flex-row">
-                  <Link href="/meetups" className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#4FBF82] px-6 py-3.5 text-base font-bold text-[#102A3A] transition-all hover:-translate-y-0.5 hover:bg-[#5fcb90] hover:shadow-2xl hover:shadow-[#4FBF82]/25 md:w-auto md:px-7 md:py-4">
-                    <span>Следваща среща</span>
-                    <span className="transition-transform group-hover:translate-x-1">→</span>
-                  </Link>
-                  <a href="#za-kogo" className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/[0.18] bg-white/[0.08] px-6 py-3.5 text-base font-bold text-white backdrop-blur-md transition-all hover:bg-white/[0.14] md:w-auto md:px-7 md:py-4">
-                    <span>Как работим</span>
-                    <span>→</span>
-                  </a>
-                </div>
-              </AnimatedSection>
+                <AnimatedSection direction="left" delay={0.6}>
+                  <p className="mb-[2.5vh] max-w-lg text-[clamp(0.8rem,3.5vw,1rem)] leading-relaxed text-white/76 md:mb-8 md:text-xl">
+                    Общност за движение, здраве и дълъг активен живот. Тренираме навън, следим BioAge и изграждаме навици без крайности.
+                  </p>
+                </AnimatedSection>
 
+                <AnimatedSection direction="up" delay={0.8}>
+                  <div className="flex flex-col gap-[clamp(0.4rem,1.5vw,0.75rem)] sm:flex-row">
+                    <Link href="/about" className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#4FBF82] px-5 py-[clamp(0.6rem,2vw,0.875rem)] text-[clamp(0.8rem,3.5vw,1rem)] font-bold text-[#102A3A] transition-all hover:-translate-y-0.5 hover:bg-[#5fcb90] hover:shadow-2xl hover:shadow-[#4FBF82]/25 md:w-auto md:px-7 md:py-4">
+                      <span>Научи за нас</span>
+                      <span className="transition-transform group-hover:translate-x-1">→</span>
+                    </Link>
+                    <a href="#za-kogo" className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/[0.18] bg-white/[0.08] px-5 py-[clamp(0.6rem,2vw,0.875rem)] text-[clamp(0.8rem,3.5vw,1rem)] font-bold text-white backdrop-blur-md transition-all hover:bg-white/[0.14] md:w-auto md:px-7 md:py-4">
+                      <span>Как работим</span>
+                      <span>→</span>
+                    </a>
+                  </div>
+                </AnimatedSection>
+              </div>
+            </div>
+
+            {/* Notifications — pinned to bottom on mobile */}
+            <div className="shrink-0 pb-[max(env(safe-area-inset-bottom,0.75rem),0.75rem)] md:hidden">
               <AnimatedSection direction="up" delay={1}>
-                <div className="mt-6 flex flex-col gap-2 md:mt-10 md:flex-row">
-                  {[
-                    { title: "Навън", label: "Тренировка и въздух" },
-                    { title: "BioAge", label: "Мери прогреса" },
-                    { title: "Редовно", label: "Всяка седмица" },
-                  ].map((item) => (
-                    <div key={item.title} className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/10 px-4 py-3 backdrop-blur-md md:min-w-0 md:flex-1">
-                      <span className="font-heading text-sm font-bold text-white md:text-base">{item.title}</span>
-                      <span className="ml-3 text-right text-xs text-white/60">{item.label}</span>
-                    </div>
-                  ))}
-                </div>
+                <HeroNotifications />
               </AnimatedSection>
             </div>
           </div>
