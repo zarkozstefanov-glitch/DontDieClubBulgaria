@@ -84,7 +84,7 @@ export default function HeroNotifications() {
               Message
             </div>
             <p className="max-w-[92%] font-heading text-[13px] font-bold leading-snug text-white min-[390px]:text-sm min-[430px]:text-[15px]">{item.title}</p>
-            <p className="mt-1 text-[11px] leading-relaxed text-white/65 min-[390px]:text-xs min-[430px]:text-[13px]">{item.label}</p>
+            <p className="mt-1 text-xs leading-relaxed text-white/70 min-[390px]:text-[13px] min-[430px]:text-sm">{item.label}</p>
           </motion.div>
         ))}
       </AnimatePresence>
