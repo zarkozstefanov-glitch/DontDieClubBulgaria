@@ -68,7 +68,7 @@ export default function HeroNotifications() {
   }, [visibleCount]);
 
   return (
-    <div className="mt-4 flex flex-col gap-2.5 min-[390px]:mt-6 min-[390px]:gap-3.5 min-[430px]:mt-8 min-[430px]:gap-4 md:hidden">
+    <div className="mt-3 flex flex-col gap-1.5 min-[390px]:mt-4 min-[390px]:gap-2 min-[430px]:mt-6 min-[430px]:gap-3 md:hidden">
       <AnimatePresence mode="popLayout">
         {notifications.slice(0, visibleCount).map((item) => (
           <motion.div
@@ -76,16 +76,16 @@ export default function HeroNotifications() {
             initial={{ opacity: 0, y: 16, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.4, type: "spring", stiffness: 140, damping: 20 }}
-            className="relative rounded-2xl border border-white/12 bg-white/10 p-3 text-white shadow-[0_10px_22px_rgba(0,0,0,0.1)] backdrop-blur-2xl min-[390px]:rounded-3xl min-[390px]:p-4 min-[414px]:p-[1.2rem] min-[430px]:p-5"
+            className="relative rounded-2xl border border-white/12 bg-white/10 p-2.5 text-white shadow-[0_10px_22px_rgba(0,0,0,0.1)] backdrop-blur-2xl min-[390px]:p-3 min-[414px]:rounded-3xl min-[414px]:p-3.5 min-[430px]:p-4"
           >
             <div className="mb-1.5 flex items-center gap-2 min-[390px]:mb-2 min-[390px]:gap-3">
-              <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center overflow-hidden rounded-lg border border-white/15 bg-white/15 shadow-sm min-[390px]:h-10 min-[390px]:w-10 min-[390px]:rounded-xl min-[414px]:h-[2.85rem] min-[414px]:w-[2.85rem] min-[430px]:h-11 min-[430px]:w-11">
+              <div className="flex h-7 w-7 flex-shrink-0 items-center justify-center overflow-hidden rounded-lg border border-white/15 bg-white/15 shadow-sm min-[390px]:h-8 min-[390px]:w-8 min-[414px]:h-9 min-[414px]:w-9 min-[414px]:rounded-xl min-[430px]:h-10 min-[430px]:w-10">
                 <Image src="/images/logo.jpg" alt="Don't Die Club Bulgaria" width={44} height={44} className="h-full w-full object-cover" />
               </div>
               <p className="text-[8px] font-bold uppercase tracking-[0.16em] text-white/55 min-[390px]:text-[10px] min-[414px]:text-[10.5px] min-[430px]:text-[11px]">Don&apos;t Die Club Bulgaria</p>
             </div>
-            <p className="max-w-[92%] font-heading text-xs font-bold leading-snug text-white min-[390px]:text-sm min-[414px]:text-[15.5px] min-[430px]:text-[15px]">{item.title}</p>
-            <p className="mt-0.5 text-[11px] leading-relaxed text-white/70 min-[390px]:mt-1 min-[390px]:text-[13px] min-[414px]:text-[14px] min-[430px]:text-sm">{item.label}</p>
+            <p className="max-w-[92%] font-heading text-[11px] font-bold leading-snug text-white min-[390px]:text-xs min-[414px]:text-[13px] min-[430px]:text-sm">{item.title}</p>
+            <p className="mt-0.5 text-[10px] leading-relaxed text-white/70 min-[390px]:text-[11px] min-[414px]:text-xs min-[430px]:text-[13px]">{item.label}</p>
           </motion.div>
         ))}
       </AnimatePresence>
