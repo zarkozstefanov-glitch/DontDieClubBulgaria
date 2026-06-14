@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import NextStepCTA from "@/components/NextStepCTA";
 
 export const metadata = {
-  title: "Храна | Don't Die Клуб България",
+  title: "Храна | Don't Die Club Bulgaria",
   description: "Хранене за дълголетие. Протоколи за черен шоколад и зехтин. Къде да намерите качествени продукти в Пловдив.",
 };
 
@@ -19,40 +19,40 @@ export default function FoodPage() {
         <section className="relative pt-28 pb-20 md:pt-36 md:pb-28 overflow-hidden">
           <div className="absolute inset-0">
             <Image src="/images/stock/food.jpg" alt="Здравословна храна" fill sizes="100vw" className="object-cover" priority quality={85} />
-            <div className="absolute inset-0 bg-gradient-to-b from-[#1a1f1c]/80 via-[#1a1f1c]/60 to-[#1E2520]" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#102A3A]/80 via-[#102A3A]/60 to-[#102A3A]" />
           </div>
           <div className="relative max-w-7xl mx-auto px-5 md:px-8">
             <AnimatedSection direction="left" delay={0.2}>
-              <span className="text-[#C9824A] font-heading font-bold text-sm uppercase tracking-widest">Хранене</span>
+              <span className="text-[#E98B63] font-heading font-bold text-sm uppercase tracking-widest">Хранене</span>
               <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl font-bold text-white mt-3 mb-4 leading-tight">
-                Храна за <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C9824A] to-[#e09b5c]">дълголетие</span>
+                Храна за <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E98B63] to-[#f0a580]">дълголетие</span>
               </h1>
               <p className="text-white/60 text-lg md:text-xl max-w-xl leading-relaxed">
-                Всяка калория трябва да се бори за живота си. Качествени продукти, проверени протоколи.
+                Лесни избори за повече енергия: протеин, истинска храна, по-малко хаос и повече повторяемост.
               </p>
             </AnimatedSection>
           </div>
         </section>
 
         {/* FOOD CATEGORIES */}
-        <section className="py-16 md:py-24 bg-[#1E2520] text-white relative overflow-hidden">
+        <section className="py-16 md:py-24 bg-[#102A3A] text-white relative overflow-hidden">
           <div className="absolute inset-0 opacity-10">
             <Image src="/images/stock/food.jpg" alt="" fill sizes="100vw" className="object-cover" />
           </div>
-          <div className="absolute inset-0 bg-gradient-to-b from-[#1E2520] via-[#1E2520]/95 to-[#1E2520]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#102A3A] via-[#102A3A]/95 to-[#102A3A]" />
           <div className="relative max-w-7xl mx-auto px-5 md:px-8">
             <AnimatedSection direction="up">
               <blockquote className="text-center text-lg md:text-xl text-white/60 italic max-w-2xl mx-auto mb-16">
                 &ldquo;Всяка калория трябва да се бори за живота си.&rdquo;
-                <cite className="block mt-2 text-[#C9824A] not-italic text-base font-medium">&mdash; Брайън Джонсън</cite>
+                <cite className="block mt-2 text-[#E98B63] not-italic text-base font-medium">&mdash; Брайън Джонсън</cite>
               </blockquote>
             </AnimatedSection>
 
             <div className="grid md:grid-cols-3 gap-6">
               {[
-                { title: "Въглехидрати и зеленчуци", items: "Горски плодове, леща, домати, гъби, тиквички, елда, киноа, ферментирали храни", gradient: "from-[#2F5D50] to-[#4a8a7a]" },
-                { title: "Протеин", items: "Грах, бобови, пилешко филе, мазна риба, яйца, суроватка, неподсладено кисело мляко", gradient: "from-[#C9824A] to-[#e09b5c]" },
-                { title: "Здравословни мазнини", items: "Екстра върджин зехтин, авокадо, макадамия, бадеми, орехи, ленено семе, какао", gradient: "from-[#9CAF88] to-[#b5c9a0]" },
+                { title: "Въглехидрати и зеленчуци", items: "Горски плодове, леща, домати, гъби, тиквички, елда, киноа, ферментирали храни", gradient: "from-[#4FBF82] to-[#3a9966]" },
+                { title: "Протеин", items: "Грах, бобови, пилешко филе, мазна риба, яйца, суроватка, неподсладено кисело мляко", gradient: "from-[#E98B63] to-[#d47a55]" },
+                { title: "Здравословни мазнини", items: "Екстра върджин зехтин, авокадо, макадамия, бадеми, орехи, ленено семе, какао", gradient: "from-[#74B9E8] to-[#5a9fd4]" },
               ].map((group, i) => (
                 <AnimatedSection key={group.title} direction={i === 0 ? "left" : i === 2 ? "right" : "up"} delay={i * 0.15}>
                   <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-7 border border-white/10 hover:bg-white/10 transition-all h-full group">
@@ -71,28 +71,28 @@ export default function FoodPage() {
         </section>
 
         {/* PROTOCOLS */}
-        <section className="py-20 md:py-28 bg-[#FAF7EF]">
+        <section className="py-20 md:py-28 bg-[#F5FAF7]">
           <div className="max-w-7xl mx-auto px-5 md:px-8">
             <AnimatedSection direction="up">
               <div className="text-center mb-16">
-                <span className="text-[#3A2A22] font-heading font-bold text-sm uppercase tracking-widest">Протоколи</span>
-                <h2 className="font-heading text-3xl md:text-5xl font-bold text-[#1E2520] mt-3">Продукти за дълголетие</h2>
+                <span className="text-[#1D2B34] font-heading font-bold text-sm uppercase tracking-widest">Протоколи</span>
+                <h2 className="font-heading text-3xl md:text-5xl font-bold text-[#1D2B34] mt-3">Продукти за дълголетие</h2>
               </div>
             </AnimatedSection>
 
             <div className="grid md:grid-cols-2 gap-8">
               {/* Chocolate */}
               <AnimatedSection direction="left" delay={0.1}>
-                <div className="bg-gradient-to-br from-[#3A2A22] to-[#5a4a3a] rounded-3xl p-7 md:p-9 text-white h-full">
+                <div className="bg-gradient-to-br from-[#1D2B34] to-[#143D4F] rounded-3xl p-7 md:p-9 text-white h-full">
                   <div className="relative h-44 -mx-7 -mt-7 md:-mx-9 md:-mt-9 mb-6 overflow-hidden rounded-t-3xl">
                     <Image src="/images/stock/chocolate.jpg" alt="Черен шоколад" fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#3A2A22] to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#1D2B34] to-transparent" />
                   </div>
                   <h3 className="font-heading font-bold text-2xl mb-5">Черен шоколад</h3>
                   <div className="space-y-3 mb-6">
                     {["Чисто какао, без добавки", "Натурален (undutched)", "Тестван за тежки метали", "Богат на полифеноли"].map((c) => (
                       <div key={c} className="flex items-center gap-3">
-                        <div className="w-6 h-6 bg-[#C9824A] rounded-full flex items-center justify-center flex-shrink-0">
+                        <div className="w-6 h-6 bg-[#E98B63] rounded-full flex items-center justify-center flex-shrink-0">
                           <svg className="w-3.5 h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
                         </div>
                         <span className="text-white/80">{c}</span>
@@ -110,17 +110,17 @@ export default function FoodPage() {
 
               {/* Olive Oil */}
               <AnimatedSection direction="right" delay={0.2}>
-                <div className="bg-gradient-to-br from-[#2F5D50] to-[#4a8a6a] rounded-3xl p-7 md:p-9 text-white h-full">
+                <div className="bg-gradient-to-br from-[#4FBF82] to-[#3a9966] rounded-3xl p-7 md:p-9 text-white h-full">
                   <div className="relative h-44 -mx-7 -mt-7 md:-mx-9 md:-mt-9 mb-6 overflow-hidden rounded-t-3xl">
                     <Image src="/images/stock/oliveoil.jpg" alt="Зехтин" fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#2F5D50] to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#4FBF82] to-transparent" />
                   </div>
                   <h3 className="font-heading font-bold text-2xl mb-5">Зехтин</h3>
                   <div className="space-y-3 mb-6">
                     {["Пресен (до 12-18 мес.)", "Студено пресован", "Полифеноли над 400 мг/кг", "Олеинова киселина над 67%", "3rd party tested", "В тъмно шише"].map((c) => (
                       <div key={c} className="flex items-center gap-3">
-                        <div className="w-6 h-6 bg-[#9CAF88] rounded-full flex items-center justify-center flex-shrink-0">
-                          <svg className="w-3.5 h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+                        <div className="w-6 h-6 bg-[#E2F4EA] rounded-full flex items-center justify-center flex-shrink-0">
+                          <svg className="w-3.5 h-3.5 text-[#4FBF82]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
                         </div>
                         <span className="text-white/80">{c}</span>
                       </div>
@@ -138,12 +138,12 @@ export default function FoodPage() {
         </section>
 
         {/* WHERE TO FIND */}
-        <section className="py-20 md:py-28 bg-[#E8EFE3]">
+        <section className="py-20 md:py-28 bg-[#E2F4EA]">
           <div className="max-w-7xl mx-auto px-5 md:px-8">
             <AnimatedSection direction="up">
               <div className="text-center mb-16">
-                <span className="text-[#2F5D50] font-heading font-bold text-sm uppercase tracking-widest">Локации</span>
-                <h2 className="font-heading text-3xl md:text-5xl font-bold text-[#1E2520] mt-3">Къде да ги намерим</h2>
+                <span className="text-[#4FBF82] font-heading font-bold text-sm uppercase tracking-widest">Локации</span>
+                <h2 className="font-heading text-3xl md:text-5xl font-bold text-[#1D2B34] mt-3">Къде да ги намерим</h2>
               </div>
             </AnimatedSection>
             <div className="grid md:grid-cols-3 gap-5">
@@ -159,9 +159,9 @@ export default function FoodPage() {
                     </div>
                     <div className="p-5">
                       <h3 className="font-heading font-bold text-lg mb-1">{store.name}</h3>
-                      <p className="text-sm text-[#1E2520]/50 mb-1">{store.location}</p>
-                      {store.address && <p className="text-sm text-[#1E2520]/40 mb-3">{store.address}</p>}
-                      <a href={`https://maps.google.com/?q=${store.mapQuery}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-sm font-medium text-[#2F5D50] hover:text-[#2F5D50]/70 transition-colors">
+                      <p className="text-sm text-[#1D2B34]/50 mb-1">{store.location}</p>
+                      {store.address && <p className="text-sm text-[#1D2B34]/40 mb-3">{store.address}</p>}
+                      <a href={`https://maps.google.com/?q=${store.mapQuery}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-sm font-medium text-[#4FBF82] hover:text-[#4FBF82]/70 transition-colors">
                         Отвори в Maps <span>&rarr;</span>
                       </a>
                     </div>

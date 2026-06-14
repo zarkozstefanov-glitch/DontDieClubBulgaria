@@ -8,7 +8,6 @@ import { AnimatePresence, motion } from "framer-motion";
 
 const navItems = [
   { href: "/", label: "Начало" },
-  { href: "/about", label: "За нас" },
   { href: "/training", label: "Тренировки" },
   { href: "/bioage", label: "BioAge" },
   { href: "/food", label: "Храна" },
@@ -31,7 +30,7 @@ export default function Navigation() {
   return (
     <>
       <nav
-        className="fixed left-0 right-0 top-0 z-[100] border-b border-white/10 bg-[#1a1f1c]/82 shadow-xl shadow-black/20 backdrop-blur-2xl"
+        className="fixed left-0 right-0 top-0 z-[100] border-b border-white/10 bg-[#102A3A]/82 shadow-xl shadow-black/20 backdrop-blur-2xl"
       >
         <div className="mx-auto flex max-w-7xl items-center gap-2 px-3 py-2.5 md:px-8 md:py-3">
           {/* Logo */}
@@ -58,7 +57,7 @@ export default function Navigation() {
                 href={href}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                   pathname === href
-                    ? "bg-white text-[#1a1f1c]"
+                    ? "bg-white text-[#102A3A]"
                     : "text-white/70 hover:text-white hover:bg-white/10"
                 }`}
               >
@@ -69,7 +68,7 @@ export default function Navigation() {
 
           <button
             onClick={() => setMenuOpen((open) => !open)}
-            className="relative ml-auto inline-flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-2xl border border-white/20 bg-white/92 text-[#1a1f1c] shadow-lg shadow-black/20 transition hover:bg-white md:hidden"
+            className="relative ml-auto inline-flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-2xl border border-white/20 bg-white/92 text-[#102A3A] shadow-lg shadow-black/20 transition hover:bg-white md:hidden"
             aria-label="Отвори меню"
             aria-expanded={menuOpen}
             type="button"
@@ -89,7 +88,6 @@ export default function Navigation() {
               />
             </span>
           </button>
-
         </div>
       </nav>
 
@@ -101,7 +99,7 @@ export default function Navigation() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-[70] flex flex-col items-center justify-center bg-[#1a1f1c]/86 backdrop-blur-2xl"
+            className="fixed inset-0 z-[70] flex flex-col items-center justify-center bg-[#102A3A]/92 backdrop-blur-2xl"
           >
             <div className="flex flex-col items-center gap-2">
               {navItems.map(({ href, label }, i) => (

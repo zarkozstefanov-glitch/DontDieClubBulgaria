@@ -2,13 +2,13 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="py-14 bg-[#1E2520] text-white">
+    <footer className="py-14 bg-[#102A3A] text-white">
       <div className="max-w-7xl mx-auto px-5 md:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex items-center gap-4">
             <Image src="/images/logo.jpg" alt="Don't Die България" width={48} height={48} className="rounded-xl ring-2 ring-white/10" />
             <div>
-              <p className="font-heading font-bold text-lg">Don&apos;t Die Клуб България</p>
+              <p className="font-heading font-bold text-lg">Don&apos;t Die Club Bulgaria</p>
               <p className="text-white/40 text-sm">Независима общност, вдъхновена от публично споделени идеи.</p>
             </div>
           </div>

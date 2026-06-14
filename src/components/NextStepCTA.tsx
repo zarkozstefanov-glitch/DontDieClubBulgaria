@@ -29,7 +29,7 @@ export default function NextStepCTA({
     >
       <Link
         href={href}
-        className="group pointer-events-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-[#2F5D50]/94 px-4 py-2.5 text-sm font-bold text-white shadow-xl shadow-black/20 backdrop-blur-md transition hover:-translate-y-0.5 hover:bg-[#2F5D50] active:scale-95 md:px-5 md:py-3"
+        className="group pointer-events-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-[#4FBF82]/94 px-4 py-2.5 text-sm font-bold text-white shadow-xl shadow-black/20 backdrop-blur-md transition hover:-translate-y-0.5 hover:bg-[#4FBF82] active:scale-95 md:px-5 md:py-3"
       >
         {label}
         <span className="transition-transform group-hover:translate-x-1">&rarr;</span>

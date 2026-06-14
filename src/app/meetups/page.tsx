@@ -6,7 +6,7 @@ import SignupForm from "@/components/SignupForm";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Събирания | Don't Die Клуб България",
+  title: "Събирания | Don't Die Club Bulgaria",
   description: "Всяка неделя на Гребен канал, Пловдив. Групова тренировка, предизвикателства и споделяне на прогрес. Запиши се!",
 };
 
@@ -20,13 +20,13 @@ export default function MeetupsPage() {
         <section className="relative pt-28 pb-20 md:pt-36 md:pb-28 overflow-hidden">
           <div className="absolute inset-0">
             <Image src="/images/stock/community.jpg" alt="Общност" fill sizes="100vw" className="object-cover" priority quality={85} />
-            <div className="absolute inset-0 bg-gradient-to-b from-[#1a1f1c]/80 via-[#1a1f1c]/62 to-[#FAF7EF]" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#102A3A]/80 via-[#102A3A]/62 to-[#F5FAF7]" />
           </div>
           <div className="relative max-w-7xl mx-auto px-5 md:px-8">
             <AnimatedSection direction="left" delay={0.2}>
-              <span className="text-[#C9824A] font-heading font-bold text-sm uppercase tracking-widest">Всяка неделя</span>
+              <span className="text-[#E98B63] font-heading font-bold text-sm uppercase tracking-widest">Всяка неделя</span>
               <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl font-bold text-white mt-3 mb-4 leading-tight">
-                Събираме <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C9824A] to-[#e09b5c]">се</span>
+                Събираме <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E98B63] to-[#f0a580]">се</span>
               </h1>
               <p className="text-white/60 text-lg md:text-xl max-w-xl leading-relaxed">
                 Групова тренировка, нови предизвикателства, споделяне на прогрес — всяка неделя на Гребен канал, Пловдив.
@@ -36,7 +36,7 @@ export default function MeetupsPage() {
         </section>
 
         {/* WHAT HAPPENS */}
-        <section className="py-16 md:py-24 bg-[#FAF7EF]">
+        <section className="py-16 md:py-24 bg-[#F5FAF7]">
           <div className="max-w-7xl mx-auto px-5 md:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
               {[
@@ -46,13 +46,13 @@ export default function MeetupsPage() {
                 { text: "Споделяне на прогрес", icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10" },
               ].map((item, i) => (
                 <AnimatedSection key={item.text} direction={i < 2 ? "left" : "right"} delay={i * 0.1}>
-                  <div className="bg-white rounded-2xl p-5 border border-[#2F5D50]/10 text-center hover:shadow-lg transition-all group hover:-translate-y-1">
-                    <div className="w-12 h-12 bg-[#2F5D50]/10 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:bg-[#2F5D50] transition-colors">
-                      <svg className="w-5 h-5 text-[#2F5D50] group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <div className="bg-white rounded-2xl p-5 border border-[#4FBF82]/10 text-center hover:shadow-lg transition-all group hover:-translate-y-1">
+                    <div className="w-12 h-12 bg-[#4FBF82]/10 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:bg-[#4FBF82] transition-colors">
+                      <svg className="w-5 h-5 text-[#4FBF82] group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                         <path strokeLinecap="round" strokeLinejoin="round" d={item.icon} />
                       </svg>
                     </div>
-                    <p className="font-medium text-[#1E2520] text-sm">{item.text}</p>
+                    <p className="font-medium text-[#1D2B34] text-sm">{item.text}</p>
                   </div>
                 </AnimatedSection>
               ))}
@@ -61,43 +61,43 @@ export default function MeetupsPage() {
         </section>
 
         {/* MAP + LOCATION */}
-        <section className="py-16 md:py-24 bg-[#E8EFE3]">
+        <section className="py-16 md:py-24 bg-[#E2F4EA]">
           <div className="max-w-7xl mx-auto px-5 md:px-8">
             <AnimatedSection direction="scale" delay={0.2}>
-              <div className="bg-white rounded-3xl border border-[#2F5D50]/10 shadow-lg overflow-hidden mb-12">
+              <div className="bg-white rounded-3xl border border-[#4FBF82]/10 shadow-lg overflow-hidden mb-12">
                 <div className="grid md:grid-cols-2">
                   <div className="h-72 md:h-auto md:min-h-[350px]">
                     <iframe src="https://maps.google.com/maps?q=Rowing+Canal+Plovdiv+Bulgaria&output=embed&z=15" className="w-full h-full border-0" loading="lazy" title="Място за събиране" />
                   </div>
                   <div className="p-7 md:p-10 flex flex-col justify-center">
-                    <span className="mb-3 inline-flex w-fit rounded-full bg-[#2F5D50]/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#2F5D50]">
+                    <span className="mb-3 inline-flex w-fit rounded-full bg-[#4FBF82]/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#4FBF82]">
                       Следваща среща
                     </span>
-                    <h3 className="font-heading font-bold text-3xl text-[#1E2520] mb-3">Неделя, 09:30 ч.</h3>
-                    <p className="text-[#1E2520]/65 leading-relaxed mb-5">
+                    <h3 className="font-heading font-bold text-3xl text-[#1D2B34] mb-3">Неделя, 09:30 ч.</h3>
+                    <p className="text-[#1D2B34]/65 leading-relaxed mb-5">
                       Срещаме се на Гребен канал, Пловдив. Започваме с лека загрявка, после групова тренировка, мобилност и кратък разговор за навиците през седмицата.
                     </p>
                     <div className="mb-5 grid grid-cols-2 gap-3">
-                      <div className="rounded-2xl bg-[#FAF7EF] p-4">
-                        <p className="text-xs font-bold uppercase tracking-wider text-[#C9824A]">Място</p>
-                        <p className="mt-1 font-heading font-bold text-[#1E2520]">Гребен канал</p>
+                      <div className="rounded-2xl bg-[#F5FAF7] p-4">
+                        <p className="text-xs font-bold uppercase tracking-wider text-[#E98B63]">Място</p>
+                        <p className="mt-1 font-heading font-bold text-[#1D2B34]">Гребен канал</p>
                       </div>
-                      <div className="rounded-2xl bg-[#FAF7EF] p-4">
-                        <p className="text-xs font-bold uppercase tracking-wider text-[#C9824A]">Час</p>
-                        <p className="mt-1 font-heading font-bold text-[#1E2520]">09:30</p>
+                      <div className="rounded-2xl bg-[#F5FAF7] p-4">
+                        <p className="text-xs font-bold uppercase tracking-wider text-[#E98B63]">Час</p>
+                        <p className="mt-1 font-heading font-bold text-[#1D2B34]">09:30</p>
                       </div>
                     </div>
                     <ul className="space-y-2.5 mb-6">
                       {["Загрявка и мобилност", "Тренировка според нивото", "Предизвикателство за седмицата", "Разговор за прогрес и BioAge"].map((item) => (
-                        <li key={item} className="flex items-center gap-3 text-sm text-[#1E2520]/70">
-                          <div className="w-5 h-5 bg-[#2F5D50] rounded-full flex items-center justify-center flex-shrink-0">
+                        <li key={item} className="flex items-center gap-3 text-sm text-[#1D2B34]/70">
+                          <div className="w-5 h-5 bg-[#4FBF82] rounded-full flex items-center justify-center flex-shrink-0">
                             <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
                           </div>
                           {item}
                         </li>
                       ))}
                     </ul>
-                    <a href="https://maps.google.com/?q=Rowing+Canal+Plovdiv+Bulgaria" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-[#2F5D50] px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-[#24483f]">
+                    <a href="https://maps.google.com/?q=Rowing+Canal+Plovdiv+Bulgaria" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-[#4FBF82] px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-[#3a9966]">
                       <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
                       Отвори в Google Maps
                     </a>
@@ -119,10 +119,10 @@ export default function MeetupsPage() {
         </section>
 
         {/* SOCIAL MEDIA */}
-        <section className="py-16 md:py-24 bg-[#2F5D50] text-white">
+        <section className="py-16 md:py-24 bg-[#102A3A] text-white">
           <div className="max-w-3xl mx-auto px-5 md:px-8 text-center">
             <AnimatedSection direction="up">
-              <span className="text-[#9CAF88] font-heading font-bold text-sm uppercase tracking-widest">Следвай ни</span>
+              <span className="text-[#74B9E8] font-heading font-bold text-sm uppercase tracking-widest">Следвай ни</span>
               <h2 className="font-heading text-3xl md:text-4xl font-bold mt-3 mb-8">Бъди част от общността</h2>
             </AnimatedSection>
             <AnimatedSection direction="up" delay={0.2}>
@@ -151,12 +151,12 @@ export default function MeetupsPage() {
         </section>
 
         {/* DISCLAIMER */}
-        <section className="py-14 bg-[#FAF7EF]">
+        <section className="py-14 bg-[#F5FAF7]">
           <div className="max-w-3xl mx-auto px-5">
             <AnimatedSection direction="up">
-              <div className="bg-gradient-to-r from-[#C9824A]/10 to-[#C9824A]/5 rounded-3xl p-7 border border-[#C9824A]/15">
-                <h3 className="font-heading font-bold text-[#3A2A22] mb-2">Безопасност и отговорност</h3>
-                <p className="text-sm text-[#3A2A22]/70 leading-relaxed">
+              <div className="bg-gradient-to-r from-[#E98B63]/10 to-[#E98B63]/5 rounded-3xl p-7 border border-[#E98B63]/15">
+                <h3 className="font-heading font-bold text-[#1D2B34] mb-2">Безопасност и отговорност</h3>
+                <p className="text-sm text-[#1D2B34]/70 leading-relaxed">
                   Информацията в сайта е с образователна и мотивационна цел. Тя не е медицински съвет. Ако имате заболяване, травми или не сте тренирали отдавна, консултирайте се с медицински специалист.
                 </p>
               </div>

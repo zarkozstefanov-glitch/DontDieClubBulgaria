@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import NextStepCTA from "@/components/NextStepCTA";
 
 export const metadata = {
-  title: "BioAge Тест | Don't Die Клуб България",
+  title: "BioAge Тест | Don't Die Club Bulgaria",
   description: "Шест теста за биологична възраст с инструкции и интерактивен калкулатор. Измери реалната си физическа възраст.",
 };
 
@@ -66,13 +66,13 @@ export default function BioAgePage() {
         <section className="relative pt-28 pb-20 md:pt-36 md:pb-28 overflow-hidden">
           <div className="absolute inset-0">
             <Image src="/images/stock/balance.jpg" alt="BioAge тест" fill sizes="100vw" className="object-cover" priority quality={85} />
-            <div className="absolute inset-0 bg-gradient-to-b from-[#1a1f1c]/80 via-[#1a1f1c]/60 to-[#E8EFE3]" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#102A3A]/80 via-[#102A3A]/60 to-[#E2F4EA]" />
           </div>
           <div className="relative max-w-7xl mx-auto px-5 md:px-8">
             <AnimatedSection direction="left" delay={0.2}>
-              <span className="text-[#9CAF88] font-heading font-bold text-sm uppercase tracking-widest">Измери се</span>
+              <span className="text-[#74B9E8] font-heading font-bold text-sm uppercase tracking-widest">Измери се</span>
               <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl font-bold text-white mt-3 mb-4 leading-tight">
-                BioAge <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9CAF88] to-[#2F5D50]">тест</span>
+                BioAge <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#74B9E8] to-[#4FBF82]">тест</span>
               </h1>
               <p className="text-white/60 text-lg md:text-xl max-w-xl leading-relaxed">
                 Шест теста, които показват реалната ти физическа възраст. Снимки и инструкции за всеки тест.
@@ -82,7 +82,7 @@ export default function BioAgePage() {
         </section>
 
         {/* TESTS GRID */}
-        <section className="py-16 md:py-24 bg-[#E8EFE3]">
+        <section className="py-16 md:py-24 bg-[#E2F4EA]">
           <div className="max-w-7xl mx-auto px-5 md:px-8">
             <BioAgeTestsGrid tests={bioAgeTests} />
 

@@ -1,26 +1,38 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-warm-bg: #FAF7EF;
+  --color-dark: #102A3A;
+  --color-dark-soft: #143D4F;
+  --color-blue: #74B9E8;
+  --color-green: #4FBF82;
+  --color-bg: #F5FAF7;
+  --color-bg-soft: #E2F4EA;
+  --color-accent: #E98B63;
+  --color-text: #1D2B34;
+  --color-white: #FFFFFF;
+
+  /* Legacy aliases for components that use old names */
+  --color-warm-bg: #F5FAF7;
   --color-warm-card: #FFFFFF;
-  --color-green-primary: #2F5D50;
-  --color-green-soft: #9CAF88;
-  --color-earth: #C9824A;
-  --color-chocolate: #3A2A22;
-  --color-text-dark: #1E2520;
-  --color-green-light-bg: #E8EFE3;
+  --color-green-primary: #4FBF82;
+  --color-green-soft: #E2F4EA;
+  --color-earth: #E98B63;
+  --color-chocolate: #1D2B34;
+  --color-text-dark: #1D2B34;
+  --color-green-light-bg: #E2F4EA;
+
   --font-heading: var(--font-sora);
   --font-body: var(--font-inter);
 }
 
 html {
   scroll-behavior: smooth;
-  background: var(--color-warm-bg);
+  background: var(--color-bg);
 }
 
 body {
-  background: var(--color-warm-bg);
-  color: var(--color-text-dark);
+  background: var(--color-bg);
+  color: var(--color-text);
   font-family: var(--font-body), system-ui, sans-serif;
   overflow-x: clip;
 }
@@ -36,4 +48,65 @@ h1, h2, h3, h4, h5, h6 {
 .hide-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+/* Hero floating bubbles */
+.hero-bubble {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.14);
+  color: white;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  backdrop-filter: blur(18px);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.22);
+  animation: heroBubbleFloat 7s ease-in-out infinite;
+}
+
+.hero-bubble-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  box-shadow: 0 0 18px currentColor;
+}
+
+.hero-bubble-delay {
+  animation-delay: 1.4s;
+}
+
+.hero-bubble-delay-2 {
+  animation-delay: 2.8s;
+}
+
+.mobile-hero-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 13px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 12px;
+  font-weight: 800;
+  backdrop-filter: blur(14px);
+}
+
+@keyframes heroBubbleFloat {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -10px, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-bubble {
+    animation: none !important;
+  }
 }

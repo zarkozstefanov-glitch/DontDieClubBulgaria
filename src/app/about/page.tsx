@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Navigation from "@/components/Navigation";
 import AnimatedSection from "@/components/AnimatedSection";
+import VideoCardPlayer from "@/components/VideoCardPlayer";
 import Footer from "@/components/Footer";
 import NextStepCTA from "@/components/NextStepCTA";
 
@@ -12,16 +13,19 @@ export const metadata = {
 const videos = [
   {
     src: "/videos/about/sunday-meetup.mp4",
+    poster: "/images/posters/sunday-meetup.png",
     title: "Неделна среща",
     text: "Хора, движение и добра енергия. Това е основата.",
   },
   {
     src: "/videos/about/outdoor-cardio.mp4",
+    poster: "/images/posters/outdoor-cardio.png",
     title: "Навън",
     text: "Парк, колела, бягане, разходки. Не всичко трябва да е зала.",
   },
   {
     src: "/videos/about/mobility-food.mp4",
+    poster: "/images/posters/mobility-food.png",
     title: "След тренировката",
     text: "Мобилност, разговори и храна. Общността продължава след края.",
   },
@@ -78,7 +82,7 @@ export default function AboutPage() {
               </AnimatedSection>
 
               <AnimatedSection direction="right" className="lg:col-span-7">
-                <VideoCard video={videos[0]} kicker="Реален кадър" title="Неделя сутрин" text="Хора, движение и добра енергия. Това е начинът да започнем седмицата." />
+                <VideoCardPlayer video={videos[0]} kicker="Реален кадър" title="Неделя сутрин" text="Хора, движение и добра енергия. Това е начинът да започнем седмицата." />
               </AnimatedSection>
               <AnimatedSection direction="left" className="lg:col-span-5">
                 <MediaCard title="Метод" text="Започваме с движение, после тестове, после разговор. Базово, ясно, без излишен шум." bullets={["Загрявка и мобилност", "Групова тренировка", "BioAge и навици", "Седмично предизвикателство"]} />
@@ -92,7 +96,7 @@ export default function AboutPage() {
               </AnimatedSection>
 
               <AnimatedSection direction="right" className="lg:col-span-7">
-                <VideoCard video={videos[1]} kicker="Следващ пласт" title="Навън, не само в зала" text="Колела, бягане, разходки и мобилност. Реалният живот е навън." />
+                <VideoCardPlayer video={videos[1]} kicker="Следващ пласт" title="Навън, не само в зала" text="Колела, бягане, разходки и мобилност. Реалният живот е навън." />
               </AnimatedSection>
               <AnimatedSection direction="left" className="lg:col-span-5">
                 <MediaCard title="За кого е" text="За хора, които искат структура, но не искат да живеят по програма. За хора, които търсят общност, а не шум." />
@@ -106,7 +110,7 @@ export default function AboutPage() {
               </AnimatedSection>
 
               <AnimatedSection direction="right" className="lg:col-span-7">
-                <VideoCard video={videos[2]} kicker="Краят не е край" title="След тренировката" text="Мобилност, разговори и храна. Именно там се изгражда навикът." />
+                <VideoCardPlayer video={videos[2]} kicker="Краят не е край" title="След тренировката" text="Мобилност, разговори и храна. Именно там се изгражда навикът." />
               </AnimatedSection>
               <AnimatedSection direction="left" className="lg:col-span-5">
                 <MediaCard title="Обещание" text="Няма да те заливаме с теория. Ще ти дадем ритъм, място и хора, с които да се върнеш следващата неделя." />
@@ -156,20 +160,3 @@ function ImageCard({ src, alt, kicker, title, text }: { src: string; alt: string
   );
 }
 
-function VideoCard({ video, kicker, title, text }: { video: { src: string; title: string; text: string }; kicker: string; title: string; text: string }) {
-  return (
-    <div className="overflow-hidden rounded-[2rem] border border-[#2F5D50]/10 bg-[#1a1f1c] shadow-lg shadow-[#2F5D50]/10">
-      <div className="relative aspect-[9/14]">
-        <video className="h-full w-full object-cover" controls playsInline preload="auto" controlsList="nodownload">
-          <source src={video.src} type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-[#1a1f1c]/65 via-transparent to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-          <p className="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-white/60">{kicker}</p>
-          <h3 className="font-heading text-2xl font-bold">{title}</h3>
-          <p className="mt-2 max-w-xl text-sm leading-relaxed text-white/80">{text}</p>
-        </div>
-      </div>
-    </div>
-  );
-}

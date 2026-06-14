@@ -15,9 +15,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Don't Die Клуб България",
+  title: "Don't Die Club Bulgaria",
   description:
-    "Общност за спорт, здравословни навици, дълголетие и групова мотивация. Вдъхновени от Bryan Johnson.",
+    "Don't Die Club Bulgaria е общност за движение, здравословни навици и измерим прогрес. Тренировки, BioAge тестове, предизвикателства и събирания на открито в България.",
 };
 
 export default function RootLayout({
