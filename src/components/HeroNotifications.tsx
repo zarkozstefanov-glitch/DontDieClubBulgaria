@@ -48,9 +48,13 @@ export default function HeroNotifications() {
       return () => clearTimeout(btnTimer);
     }
 
-    // First message starts right after other elements (~1s), then 1.5s typing between each
-    const wait = visibleCount === 0 ? 1000 : 300;
+    // First message appears immediately (no typing), others get typing dots
+    if (visibleCount === 0) {
+      const timer = setTimeout(() => setVisibleCount(1), 1000);
+      return () => clearTimeout(timer);
+    }
 
+    const wait = 300;
     const waitTimer = setTimeout(() => {
       setTyping(true);
       const typeTimer = setTimeout(() => {
