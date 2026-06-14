@@ -19,7 +19,7 @@ export default function Home() {
               alt="Групова тренировка сред природата"
               fill
               sizes="100vw"
-              className="object-cover object-[62%_center] md:object-center"
+              className="object-cover hero-pan-mobile md:object-center"
               priority
               quality={90}
             />

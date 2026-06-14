@@ -105,8 +105,31 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+@keyframes heroPanLR {
+  0% {
+    object-position: 20% center;
+  }
+  50% {
+    object-position: 80% center;
+  }
+  100% {
+    object-position: 20% center;
+  }
+}
+
+.hero-pan-mobile {
+  animation: heroPanLR 12s ease-in-out infinite;
+}
+
+@media (min-width: 768px) {
+  .hero-pan-mobile {
+    animation: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .hero-bubble {
+  .hero-bubble,
+  .hero-pan-mobile {
     animation: none !important;
   }
 }
