@@ -44,10 +44,10 @@ export default function Home() {
           </div>
 
           {/* Content */}
-          <div className="relative z-20 mx-auto flex min-h-[100svh] max-w-7xl items-end px-5 pb-16 pt-24 md:items-center md:px-8 md:pb-10 md:pt-28">
+          <div className="relative z-20 mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-center px-5 pt-20 pb-8 md:px-8 md:pt-28 md:pb-10">
             <div className="max-w-2xl w-full">
               <AnimatedSection direction="left" delay={0.4}>
-                <h1 className="mb-2 font-heading text-[1.7rem] font-bold leading-[1.08] text-white sm:text-5xl md:mb-5 md:text-7xl">
+                <h1 className="mb-3 font-heading text-[2.1rem] font-bold leading-[1.05] text-white sm:text-5xl md:mb-5 md:text-7xl">
                   Влез във форма.
                   <br />
                   Изгради навици.
@@ -58,18 +58,18 @@ export default function Home() {
               </AnimatedSection>
 
               <AnimatedSection direction="left" delay={0.6}>
-                <p className="mb-4 max-w-lg text-sm leading-relaxed text-white/72 md:mb-8 md:text-xl">
+                <p className="mb-5 max-w-lg text-[15px] leading-relaxed text-white/72 md:mb-8 md:text-xl">
                   Don&apos;t Die Club Bulgaria е общност за движение, здравословни навици и измерим прогрес — за хора, които искат повече енергия, по-добра форма и по-дълъг активен живот.
                 </p>
               </AnimatedSection>
 
               <AnimatedSection direction="up" delay={0.8}>
-                <div className="flex flex-col gap-2.5 sm:flex-row sm:gap-3">
-                  <Link href="/meetups" className="group w-full rounded-full bg-[#4FBF82] px-6 py-3 text-center text-sm font-bold text-[#102A3A] transition-all hover:-translate-y-0.5 hover:shadow-2xl hover:shadow-[#4FBF82]/30 md:w-auto md:px-8 md:py-4 md:text-base">
+                <div className="flex flex-col gap-3 sm:flex-row">
+                  <Link href="/meetups" className="group w-full rounded-full bg-[#4FBF82] px-7 py-3.5 text-center text-[15px] font-bold text-[#102A3A] transition-all hover:-translate-y-0.5 hover:shadow-2xl hover:shadow-[#4FBF82]/30 md:w-auto md:px-8 md:py-4 md:text-base">
                     Присъедини се към следващото събиране
                     <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform">&rarr;</span>
                   </Link>
-                  <Link href="/training" className="w-full rounded-full border border-white/20 bg-white/10 px-6 py-3 text-center text-sm font-bold text-white backdrop-blur-md transition-all hover:bg-white/20 md:w-auto md:px-8 md:py-4 md:text-base">
+                  <Link href="/training" className="w-full rounded-full border border-white/20 bg-white/10 px-7 py-3.5 text-center text-[15px] font-bold text-white backdrop-blur-md transition-all hover:bg-white/20 md:w-auto md:px-8 md:py-4 md:text-base">
                     Виж как тренираме
                   </Link>
                 </div>
