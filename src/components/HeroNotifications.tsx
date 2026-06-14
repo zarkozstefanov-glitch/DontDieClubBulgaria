@@ -38,25 +38,27 @@ function TypingDots() {
 
 export default function HeroNotifications() {
   const [visibleCount, setVisibleCount] = useState(0);
-  const [typing, setTyping] = useState(true);
+  const [typing, setTyping] = useState(false);
+  const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
     if (visibleCount >= notifications.length) {
       setTyping(false);
-      return;
+      // Show button 1s after last message
+      const btnTimer = setTimeout(() => setShowButton(true), 1000);
+      return () => clearTimeout(btnTimer);
     }
 
-    // First message waits 5s, subsequent ones wait 2.5s
+    // First message: 5s delay. Others: start typing immediately
     const initialDelay = visibleCount === 0 ? 5000 : 0;
 
     const startTimer = setTimeout(() => {
       setTyping(true);
       const typingTimer = setTimeout(() => {
         setTyping(false);
-        const showTimer = setTimeout(() => {
+        setTimeout(() => {
           setVisibleCount((c) => c + 1);
         }, 200);
-        return () => clearTimeout(showTimer);
       }, 2500);
       return () => clearTimeout(typingTimer);
     }, initialDelay);
@@ -65,7 +67,7 @@ export default function HeroNotifications() {
   }, [visibleCount]);
 
   return (
-    <div className="mt-3 flex flex-col gap-2 min-[390px]:mt-4 min-[390px]:gap-2.5 min-[430px]:gap-3 md:hidden">
+    <div className="mt-4 flex flex-col gap-2 min-[390px]:mt-5 min-[390px]:gap-2.5 min-[430px]:mt-6 min-[430px]:gap-3 md:mt-8">
       <AnimatePresence mode="popLayout">
         {notifications.slice(0, visibleCount).map((item) => (
           <motion.div
@@ -73,7 +75,7 @@ export default function HeroNotifications() {
             initial={{ opacity: 0, y: 16, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.4, type: "spring", stiffness: 140, damping: 20 }}
-            className="relative rounded-2xl border border-white/12 bg-white/10 p-2.5 pr-10 text-white shadow-[0_10px_22px_rgba(0,0,0,0.1)] backdrop-blur-2xl min-[390px]:rounded-2xl min-[390px]:p-3 min-[390px]:pr-12 min-[430px]:p-3.5 min-[430px]:pr-14"
+            className="relative rounded-2xl border border-white/12 bg-white/10 p-2.5 pr-10 text-white shadow-[0_10px_22px_rgba(0,0,0,0.1)] backdrop-blur-2xl min-[390px]:p-3 min-[390px]:pr-12 min-[430px]:p-3.5 min-[430px]:pr-14"
           >
             <div className="mb-1 flex items-center gap-2 min-[390px]:mb-1.5 min-[390px]:gap-2.5">
               <div className="flex h-7 w-7 flex-shrink-0 items-center justify-center overflow-hidden rounded-lg border border-white/15 bg-white/15 shadow-sm min-[390px]:h-8 min-[390px]:w-8 min-[430px]:h-9 min-[430px]:w-9 min-[430px]:rounded-xl">
@@ -100,6 +102,21 @@ export default function HeroNotifications() {
           <TypingDots />
         </motion.div>
       )}
+
+      <AnimatePresence>
+        {showButton && (
+          <motion.a
+            href="#za-kogo"
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, type: "spring", stiffness: 120, damping: 18 }}
+            className="mt-1 inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/[0.18] bg-white/[0.08] px-6 py-3 text-[15px] font-bold text-white backdrop-blur-md transition-all hover:bg-white/[0.14] min-[390px]:py-3.5 min-[390px]:text-base min-[430px]:py-4 min-[430px]:text-lg md:w-auto md:px-7 md:py-4 md:text-base"
+          >
+            <span>За кого е клубът?</span>
+            <span>↓</span>
+          </motion.a>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

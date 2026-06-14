@@ -29,38 +29,16 @@ export default function Home() {
           </div>
 
           {/* Content */}
-          <div className="relative z-20 mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-between px-5 pt-24 pb-6 md:justify-center md:px-8 md:pt-28 md:pb-10">
-            {/* Top: title, text, buttons */}
+          <div className="relative z-20 mx-auto flex min-h-[100svh] max-w-7xl flex-col px-5 pt-24 pb-6 md:justify-center md:px-8 md:pt-28 md:pb-10">
             <div className="max-w-2xl w-full">
               <AnimatedSection direction="left" delay={0.4}>
-                <h1 className="mb-3 max-w-xl font-heading text-[2rem] font-bold leading-[1.02] text-white min-[390px]:text-[2.3rem] min-[430px]:text-[2.6rem] sm:text-5xl md:mb-5 md:text-7xl">
-                  Влез във форма.
-                  <span className="block text-[#74B9E8]">Изгради навици.</span>
+                <h1 className="mb-0 max-w-xl font-heading text-[2rem] font-bold leading-[1.02] text-white min-[390px]:text-[2.3rem] min-[430px]:text-[2.6rem] sm:text-5xl md:mb-5 md:text-7xl">
+                  Don&apos;t Die.
+                  <span className="block text-[#74B9E8]">Живей повече.</span>
                 </h1>
               </AnimatedSection>
 
-              <AnimatedSection direction="left" delay={0.6}>
-                <p className="mb-4 max-w-lg text-[15px] leading-relaxed text-white/76 min-[390px]:text-base min-[430px]:text-[17px] md:mb-8 md:text-xl">
-                  Общност за движение, здраве и дълъг активен живот. Тренираме навън, следим BioAge и изграждаме навици без крайности.
-                </p>
-              </AnimatedSection>
-
-              <AnimatedSection direction="up" delay={0.8}>
-                <div className="flex flex-col gap-2.5 min-[390px]:gap-3 sm:flex-row">
-                  <Link href="/about" className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#4FBF82] px-6 py-3 text-[15px] font-bold text-[#102A3A] transition-all hover:-translate-y-0.5 hover:bg-[#5fcb90] hover:shadow-2xl hover:shadow-[#4FBF82]/25 min-[390px]:py-3.5 min-[390px]:text-base min-[430px]:py-4 min-[430px]:text-lg md:w-auto md:px-7 md:py-4 md:text-base">
-                    <span>Научи за нас</span>
-                    <span className="transition-transform group-hover:translate-x-1">→</span>
-                  </Link>
-                  <a href="#za-kogo" className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/[0.18] bg-white/[0.08] px-6 py-3 text-[15px] font-bold text-white backdrop-blur-md transition-all hover:bg-white/[0.14] min-[390px]:py-3.5 min-[390px]:text-base min-[430px]:py-4 min-[430px]:text-lg md:w-auto md:px-7 md:py-4 md:text-base">
-                    <span>Как работим</span>
-                    <span>→</span>
-                  </a>
-                </div>
-              </AnimatedSection>
-            </div>
-
-            {/* Bottom: notification messages */}
-            <div className="max-w-2xl w-full md:hidden">
+              {/* Messages appear below title, then button at the end */}
               <HeroNotifications />
             </div>
           </div>
