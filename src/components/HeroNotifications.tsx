@@ -50,7 +50,7 @@ export default function HeroNotifications() {
 
     // First message appears immediately (no typing), others get typing dots
     if (visibleCount === 0) {
-      const timer = setTimeout(() => setVisibleCount(1), 1000);
+      const timer = setTimeout(() => setVisibleCount(1), 1500);
       return () => clearTimeout(timer);
     }
 
@@ -76,16 +76,13 @@ export default function HeroNotifications() {
             initial={{ opacity: 0, y: 16, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.4, type: "spring", stiffness: 140, damping: 20 }}
-            className="relative rounded-2xl border border-white/12 bg-white/10 p-3 pr-11 text-white shadow-[0_10px_22px_rgba(0,0,0,0.1)] backdrop-blur-2xl min-[390px]:rounded-3xl min-[390px]:p-4 min-[390px]:pr-14 min-[430px]:p-5 min-[430px]:pr-16"
+            className="relative rounded-2xl border border-white/12 bg-white/10 p-3 text-white shadow-[0_10px_22px_rgba(0,0,0,0.1)] backdrop-blur-2xl min-[390px]:rounded-3xl min-[390px]:p-4 min-[430px]:p-5"
           >
             <div className="mb-1.5 flex items-center gap-2 min-[390px]:mb-2 min-[390px]:gap-3">
               <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center overflow-hidden rounded-lg border border-white/15 bg-white/15 shadow-sm min-[390px]:h-10 min-[390px]:w-10 min-[390px]:rounded-xl min-[430px]:h-11 min-[430px]:w-11">
                 <Image src="/images/logo.jpg" alt="Don't Die Club Bulgaria" width={44} height={44} className="h-full w-full object-cover" />
               </div>
               <p className="text-[8px] font-bold uppercase tracking-[0.16em] text-white/55 min-[390px]:text-[10px] min-[430px]:text-[11px]">Don&apos;t Die Club Bulgaria</p>
-            </div>
-            <div className="absolute right-2.5 top-2.5 rounded-full border border-white/10 bg-white/10 px-1.5 py-0.5 text-[7px] font-bold uppercase tracking-[0.14em] text-white/65 min-[390px]:right-3 min-[390px]:top-3 min-[390px]:px-2.5 min-[390px]:py-1 min-[390px]:text-[9px] min-[430px]:text-[10px]">
-              Message
             </div>
             <p className="max-w-[92%] font-heading text-xs font-bold leading-snug text-white min-[390px]:text-sm min-[430px]:text-[15px]">{item.title}</p>
             <p className="mt-0.5 text-[11px] leading-relaxed text-white/70 min-[390px]:mt-1 min-[390px]:text-[13px] min-[430px]:text-sm">{item.label}</p>
