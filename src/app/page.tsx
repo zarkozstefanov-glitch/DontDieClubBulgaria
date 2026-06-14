@@ -61,10 +61,17 @@ export default function Home() {
 
               {/* Floating cards — mobile */}
               <AnimatedSection direction="up" delay={1}>
-                <div className="mt-6 grid grid-cols-3 gap-2 md:hidden">
-                  <span className="mobile-hero-pill text-center">Навън</span>
-                  <span className="mobile-hero-pill text-center">Заедно</span>
-                  <span className="mobile-hero-pill text-center">Редовно</span>
+                <div className="mt-6 grid grid-cols-1 gap-2 sm:grid-cols-3 md:hidden">
+                  {[
+                    { title: "Навън", label: "тренировка и въздух" },
+                    { title: "Заедно", label: "train buddy" },
+                    { title: "Редовно", label: "малко, но всяка седмица" },
+                  ].map((item) => (
+                    <div key={item.title} className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/10 px-4 py-3 backdrop-blur-md">
+                      <span className="font-heading text-sm font-bold text-white">{item.title}</span>
+                      <span className="ml-3 text-right text-xs text-white/60">{item.label}</span>
+                    </div>
+                  ))}
                 </div>
               </AnimatedSection>
             </div>
