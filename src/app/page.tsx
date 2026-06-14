@@ -44,10 +44,10 @@ export default function Home() {
           </div>
 
           {/* Content */}
-          <div className="relative z-20 mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-between px-5 pt-24 pb-6 md:justify-center md:px-8 md:pt-28 md:pb-10">
-            <div className="max-w-2xl w-full">
+          <div className="relative z-20 mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-end px-5 pb-[env(safe-area-inset-bottom,1.5rem)] md:justify-center md:px-8 md:pb-10">
+            <div className="max-w-2xl w-full mb-6 md:mb-0">
               <AnimatedSection direction="left" delay={0.4}>
-                <h1 className="mb-3 font-heading text-[2rem] font-bold leading-[1.05] text-white sm:text-5xl md:mb-5 md:text-7xl">
+                <h1 className="mb-[3vw] font-heading text-[clamp(2.2rem,7vw,4.5rem)] font-bold leading-[1.05] text-white md:mb-5 md:text-7xl">
                   Влез във форма.
                   <br />
                   Изгради навици.
@@ -58,32 +58,32 @@ export default function Home() {
               </AnimatedSection>
 
               <AnimatedSection direction="left" delay={0.6}>
-                <p className="mb-5 max-w-lg text-[15px] leading-relaxed text-white/72 md:mb-8 md:text-xl">
+                <p className="mb-[3vw] max-w-lg text-[clamp(0.9rem,2.5vw,1.25rem)] leading-relaxed text-white/72 md:mb-8">
                   Don&apos;t Die Club Bulgaria е общност за движение, здравословни навици и измерим прогрес — за хора, които искат повече енергия, по-добра форма и по-дълъг активен живот.
                 </p>
               </AnimatedSection>
 
               <AnimatedSection direction="up" delay={0.8}>
                 <div className="flex flex-col gap-3 sm:flex-row">
-                  <Link href="/meetups" className="group w-full rounded-full bg-[#4FBF82] px-7 py-3.5 text-center text-[15px] font-bold text-[#102A3A] transition-all hover:-translate-y-0.5 hover:shadow-2xl hover:shadow-[#4FBF82]/30 md:w-auto md:px-8 md:py-4 md:text-base">
-                    Присъедини се към следващото събиране
+                  <Link href="/meetups" className="group w-full rounded-full bg-[#4FBF82] px-7 py-[clamp(0.75rem,2vw,1rem)] text-center text-[clamp(0.9rem,2.5vw,1rem)] font-bold text-[#102A3A] transition-all hover:-translate-y-0.5 hover:shadow-2xl hover:shadow-[#4FBF82]/30 md:w-auto md:px-8 md:py-4 md:text-base">
+                    Присъедини се
                     <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform">&rarr;</span>
                   </Link>
-                  <a href="#za-kogo" className="w-full rounded-full border border-white/20 bg-white/10 px-7 py-3.5 text-center text-[15px] font-bold text-white backdrop-blur-md transition-all hover:bg-white/20 md:w-auto md:px-8 md:py-4 md:text-base">
+                  <a href="#za-kogo" className="w-full rounded-full border border-white/20 bg-white/10 px-7 py-[clamp(0.75rem,2vw,1rem)] text-center text-[clamp(0.9rem,2.5vw,1rem)] font-bold text-white backdrop-blur-md transition-all hover:bg-white/20 md:w-auto md:px-8 md:py-4 md:text-base">
                     За кого е клубът
                   </a>
                 </div>
               </AnimatedSection>
-            </div>
 
-            {/* Floating cards — bottom on mobile */}
-            <AnimatedSection direction="up" delay={1}>
-              <div className="mt-auto flex flex-wrap gap-2 pt-6 md:hidden">
-                <span className="mobile-hero-pill">Тренировка навън</span>
-                <span className="mobile-hero-pill">Train buddy</span>
-                <span className="mobile-hero-pill">Малко, но редовно</span>
-              </div>
-            </AnimatedSection>
+              {/* Floating cards — mobile */}
+              <AnimatedSection direction="up" delay={1}>
+                <div className="mt-5 flex flex-wrap gap-2 md:hidden">
+                  <span className="mobile-hero-pill">Тренировка навън</span>
+                  <span className="mobile-hero-pill">Train buddy</span>
+                  <span className="mobile-hero-pill">Малко, но редовно</span>
+                </div>
+              </AnimatedSection>
+            </div>
           </div>
 
           <div className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 animate-bounce md:flex">
