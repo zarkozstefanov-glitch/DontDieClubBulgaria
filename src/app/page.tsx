@@ -27,22 +27,6 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-r from-[#102A3A]/50 to-transparent" />
           </div>
 
-          {/* Floating bubbles — desktop */}
-          <div className="pointer-events-none absolute inset-0 z-10 hidden md:block">
-            <div className="hero-bubble absolute left-[56%] top-[28%]">
-              <span className="hero-bubble-dot bg-[#4FBF82]" />
-              Тренировка навън
-            </div>
-            <div className="hero-bubble hero-bubble-delay absolute right-[9%] top-[42%]">
-              <span className="hero-bubble-dot bg-[#74B9E8]" />
-              Train buddy
-            </div>
-            <div className="hero-bubble hero-bubble-delay-2 absolute left-[48%] bottom-[20%]">
-              <span className="hero-bubble-dot bg-white" />
-              Малко, но редовно
-            </div>
-          </div>
-
           {/* Content */}
           <div className="relative z-20 mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-center px-5 pt-20 pb-8 md:px-8 md:pt-28 md:pb-10">
             <div className="max-w-2xl w-full">
@@ -66,7 +50,7 @@ export default function Home() {
               <AnimatedSection direction="up" delay={0.8}>
                 <div className="flex flex-col gap-3 sm:flex-row">
                   <Link href="/meetups" className="group w-full rounded-full bg-[#4FBF82] px-7 py-3.5 text-center text-base font-bold text-[#102A3A] transition-all hover:-translate-y-0.5 hover:shadow-2xl hover:shadow-[#4FBF82]/30 md:w-auto md:px-8 md:py-4">
-                    Присъедини се
+                    Следваща среща
                     <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform">&rarr;</span>
                   </Link>
                   <a href="#za-kogo" className="w-full rounded-full border border-white/20 bg-white/10 px-7 py-3.5 text-center text-base font-bold text-white backdrop-blur-md transition-all hover:bg-white/20 md:w-auto md:px-8 md:py-4">
@@ -77,10 +61,10 @@ export default function Home() {
 
               {/* Floating cards — mobile */}
               <AnimatedSection direction="up" delay={1}>
-                <div className="mt-6 flex gap-2 md:hidden">
-                  <span className="mobile-hero-pill flex-1 text-center">Тренировка навън</span>
-                  <span className="mobile-hero-pill flex-1 text-center">Train buddy</span>
-                  <span className="mobile-hero-pill flex-1 text-center">Малко, но редовно</span>
+                <div className="mt-6 grid grid-cols-3 gap-2 md:hidden">
+                  <span className="mobile-hero-pill text-center">Навън</span>
+                  <span className="mobile-hero-pill text-center">Заедно</span>
+                  <span className="mobile-hero-pill text-center">Редовно</span>
                 </div>
               </AnimatedSection>
             </div>
