@@ -44,8 +44,8 @@ export default function Home() {
           </div>
 
           {/* Content */}
-          <div className="relative z-20 mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-end px-5 pb-[env(safe-area-inset-bottom,1.5rem)] md:justify-center md:px-8 md:pb-10">
-            <div className="max-w-2xl w-full mb-6 md:mb-0">
+          <div className="relative z-20 mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-center px-5 pt-20 pb-8 md:px-8 md:pt-28 md:pb-10">
+            <div className="max-w-2xl w-full">
               <AnimatedSection direction="left" delay={0.4}>
                 <h1 className="mb-[3vw] font-heading text-[clamp(2.2rem,7vw,4.5rem)] font-bold leading-[1.05] text-white md:mb-5 md:text-7xl">
                   Влез във форма.
