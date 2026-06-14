@@ -68,7 +68,7 @@ export default function HeroNotifications() {
   }, [visibleCount]);
 
   return (
-    <div className="mt-4 flex flex-col gap-2.5 min-[390px]:mt-6 min-[390px]:gap-3.5 min-[430px]:mt-8 min-[430px]:gap-4 md:mt-8">
+    <div className="mt-4 flex flex-col gap-2.5 min-[390px]:mt-6 min-[390px]:gap-3.5 min-[430px]:mt-8 min-[430px]:gap-4 md:hidden">
       <AnimatePresence mode="popLayout">
         {notifications.slice(0, visibleCount).map((item) => (
           <motion.div

@@ -39,14 +39,34 @@ export default function Home() {
               </AnimatedSection>
 
               <AnimatedSection direction="up" delay={0.7}>
-                <div className="mt-3 flex items-center gap-3 min-[390px]:mt-4 min-[430px]:mt-5">
+                <div className="mt-3 flex items-center gap-3 min-[390px]:mt-4 min-[430px]:mt-5 md:mt-0 md:mb-6">
                   <div className="h-px flex-1 bg-white/15" />
                   <span className="text-xs font-bold uppercase tracking-[0.2em] text-white/60 min-[390px]:text-[13px] min-[430px]:text-sm">Пловдив, България</span>
                   <div className="h-px flex-1 bg-white/15" />
                 </div>
               </AnimatedSection>
 
-              {/* Messages appear below, then button at the end */}
+              {/* Desktop: description + buttons */}
+              <div className="hidden md:block">
+                <AnimatedSection direction="left" delay={0.6}>
+                  <p className="mb-8 max-w-lg text-xl leading-relaxed text-white/72">
+                    Общност за движение, здраве и дълъг активен живот. Тренираме навън, следим BioAge и изграждаме навици заедно.
+                  </p>
+                </AnimatedSection>
+                <AnimatedSection direction="up" delay={0.8}>
+                  <div className="flex gap-3">
+                    <Link href="/about" className="group inline-flex items-center gap-2 rounded-full bg-[#4FBF82] px-7 py-4 text-base font-bold text-[#102A3A] transition-all hover:-translate-y-0.5 hover:bg-[#5fcb90] hover:shadow-2xl hover:shadow-[#4FBF82]/25">
+                      <span>Научи за нас</span>
+                      <span className="transition-transform group-hover:translate-x-1">→</span>
+                    </Link>
+                    <a href="#za-kogo" className="inline-flex items-center gap-2 rounded-full border border-white/[0.18] bg-white/[0.08] px-7 py-4 text-base font-bold text-white backdrop-blur-md transition-all hover:bg-white/[0.14]">
+                      За кого е клубът?
+                    </a>
+                  </div>
+                </AnimatedSection>
+              </div>
+
+              {/* Mobile: notification messages */}
               <HeroNotifications />
             </div>
           </div>
